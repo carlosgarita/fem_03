@@ -1,0 +1,439 @@
+
+:root {
+
+    /* Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: rgb(56, 204, 140);
+
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+    
+    /* Neutral */
+    --Dark_Blue: hsl(249, 10%, 26%);
+    --Grayish_Blue: hsl(246, 25%, 77%);
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mainContainer {
+    background-color: var(--Red);
+    background-image: url(../images/bg-intro-desktop.png);
+    /* background-image: url(../images/desktop-design.jpg); */
+    width: 1440px;
+    height: 796px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    
+}
+
+.thankyouText {
+    text-align: center;
+}
+
+.thankyouText h3 {
+    font-size: 4em;
+}
+
+.removeItem {
+    display: none !important;
+}
+
+.text {
+    width: 500px;
+}
+
+.text h1 {
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1.1em;
+    margin-bottom: 28px;
+    margin-top: 13px;
+    letter-spacing: 0.01em;
+}
+
+.text p {
+    font-size: 1em;
+    line-height: 1.7em;
+    text-align: left;
+    letter-spacing: 0.0em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1em;
+    color: white;
+    width: 100%;
+    height: 60px;
+    background-color: var(--Blue);
+    /* background-color: rgba(102, 249, 49, 0.2); */
+    /* border: 2px solid #77E2B4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    margin-top: 4px;
+    letter-spacing: -0.015em;
+    box-shadow: 0px 9px rgba(133, 67, 67, 0.2);
+
+}
+
+h2 span {
+    font-weight: 700;
+}
+
+
+
+.rightColumn {
+    width: 540px;
+    color: var(--Grayish_Blue);
+}
+
+.formContainer {
+    background-color: white;
+    /* border: 2px solid #77E2B4; */
+    /* height: 475px; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly;
+    flex-flow: column; */
+    padding: 40px 37px;
+    box-shadow: 0px 9px rgba(133, 67, 67, 0.2);
+}
+
+form {
+    width: 100%;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    border: 1px solid #CCC;
+    /* background-color: rgba(255, 0, 0, 0.2); */
+    border-radius: 5px;
+    padding: 16px 30px;
+    margin-bottom: 21px;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #434343;
+    /* color: #77E2B4; */
+}
+
+input[type=password] {
+    margin-bottom: 19px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+    color: #484848;
+    border-color: #484848;
+}
+
+
+ 
+input[type=submit] {
+    width: 100%;
+    background-color: var(--Green);
+    border: none;
+    /* background-color: rgba(255, 0, 0, 0.2); */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 14px 20px;
+    margin-bottom: 15px;
+    letter-spacing: 0.04em;
+    box-shadow: 0px -3px rgb(76, 190, 143) inset;
+    transition: background 0.2s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #4fb388;
+}
+
+.input-area {
+    position:relative;
+}
+
+.icon {
+    right: 15px;
+}
+
+i {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 23px;
+    color: var(--Red);
+}
+
+.error-txt {
+    color: var(--Red);
+    font-size: 11px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 5px;
+    margin-top: -13px;
+    margin-bottom: 20px;
+}
+
+form .field .error {
+    display: none !important;
+}
+
+form .field.error .error {
+    display: block !important;
+}
+
+form .field .emailError {
+    display: none !important;
+}
+
+form .field.emailError .emailError {
+    display: block !important;
+}
+
+
+
+
+
+.field {
+    width: 100%;
+}
+
+.field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        margin-left: 0;
+    }
+    20%, 80% {
+        margin-left: -12px;
+    }
+    40%, 60% {
+        margin-left: 12px;
+    }
+}
+
+form .field.error input {
+    border-color: var(--Red);
+}
+
+.disclaimer {
+    font-size: 0.7em;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.disclaimer a {
+    color: var(--Red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+ /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media query for mobile- - - - - - - - - - - - - - - - - - - - -  */
+
+ @media (max-width: 800px) {
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        box-sizing: border-box;
+    
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        
+    }
+    
+
+
+
+    .mainContainer {
+        background-color: var(--Red);
+        background-image: url(../images/bg-intro-desktop.png);
+        /* background-image: url(../images/mobile-design.jpg); */
+        width: 375px;
+        height: 1000px;
+        
+        display: block;
+        /* flex-flow: column;
+        justify-content: center; */
+        /* align-items: center; */
+        /* gap: 70px; */
+    }
+
+
+    .thankyouText {
+        text-align: center;
+        margin-top: 100%;
+    }
+    
+    .thankyouText h3 {
+        font-size: 3.5em;
+    }
+
+    .thankyouText p {
+        width: 80%;
+        margin: auto;
+    }
+
+    .text {
+        width: 320px;
+        color: rgb(255, 255, 255);
+        margin: auto;
+    }
+    
+    .text h1 {
+        font-weight: 700;
+        font-size: 1.7em;
+        line-height: 1.3em;
+        margin-top: 92px;
+        margin-bottom: 23px;
+        letter-spacing: 0.0em;
+        text-align: center;
+    }
+    
+    .text p {
+        font-size: 1em;
+        line-height: 1.65em;
+        text-align: center;
+        letter-spacing: 0.0em;
+    }
+    
+    
+    
+    .rightColumn {
+        width: 540px;
+        color: var(--Grayish_Blue);
+        display: block;
+        /* flex-flow: column;
+        align-items: center; */
+        width: 375px;
+        margin-top: 60px;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 1em;
+        color: rgb(255, 255, 255);
+        width: 330px;
+        height: 90px;
+        background-color: var(--Blue);
+        /* background-color: rgba(102, 249, 49, 0.2); */
+        /* border: 2px solid #77E2B4; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        border-radius: 10px;
+        margin-bottom: 24px;
+        margin-top: 0px;
+        letter-spacing: -0.015em;
+        box-shadow: 0px 9px rgba(133, 67, 67, 0.2);
+        margin: auto;
+        display: block;
+        padding: 20px 50px;
+        text-align: center;
+    }
+    
+    h2 span {
+        font-weight: 700;
+    }
+    
+    .formContainer {
+        background-color: rgba(255, 255, 255);
+        width: 330px;
+        /* border: 2px solid #77E2B4; */
+        /* height: 475px; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-evenly;
+        flex-flow: column; */
+        padding: 24px 25px;
+        box-shadow: 0px 9px rgba(133, 67, 67, 0.2);
+        margin: auto;
+        margin-top: 22px;
+    }
+    
+    form {
+        width: 100%;
+    }
+    
+    
+    input[type=text], input[type=password] {
+        width: 100%;
+        border: 1px solid #CCC;
+        /* background-color: rgba(255, 0, 0, 0.2); */
+        border-radius: 5px;
+        padding: 16px 30px;
+        margin-bottom: 17px;
+        font-size: 0.9em;
+        font-weight: 700;
+        color: #434343;
+        /* color: #77E2B4; */
+    }
+    
+    input[type=password] {
+        margin-bottom: 19px;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+        outline: none;
+        color: #484848;
+        border-color: #484848;
+    }
+    
+    
+     
+    input[type=submit] {
+        width: 100%;
+        background-color: var(--Green);
+        border: none;
+        /* background-color: rgba(255, 0, 0, 0.2); */
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 16px 20px;
+        
+        margin-bottom: 12px;
+        letter-spacing: 0.04em;
+        box-shadow: 0px -3px rgb(76, 190, 143) inset;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #4fb388;
+    }
+    
+    .disclaimer {
+        font-size: 0.7em;
+        text-align: center;
+        letter-spacing: -0.01em;
+        width:85%;
+        margin: auto;
+    }
+    
+    .disclaimer a {
+        color: var(--Red);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+
+ }
